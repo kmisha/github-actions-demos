@@ -48,6 +48,11 @@ jobs:
         run: |
           print %ENV
         shell: perl {0}
+      - name: Ruby - Display the environment variables and their values
+        continue-on-error: true
+        run: |
+          print %ENV
+        shell: ruby {0}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Reference a specific commit
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11

@@ -51,7 +51,7 @@ jobs:
       - name: Ruby - Display the environment variables and their values
         continue-on-error: true
         run: |
-          print %ENV
+          puts ENV.each_pair { |name, value| puts name, value }
         shell: ruby {0}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Reference a specific commit
